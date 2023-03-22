@@ -1,6 +1,6 @@
 public class Pizza implements PizzaPlan{
     private String pizza_size;
-    private String pizza_toppings;
+    private String[] pizza_toppings;
 
     @Override
     public void setPizzaSize(String size) {
@@ -12,11 +12,11 @@ public class Pizza implements PizzaPlan{
     }
 
     @Override
-    public void setPizzaToppings(String toppings) {
+    public void setPizzaToppings(String[] toppings) {
         pizza_toppings = toppings;
     }
 
-    public String getPizza_toppings(){
+    public String[] getPizza_toppings(){
         return pizza_toppings;
     }
 }

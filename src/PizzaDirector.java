@@ -10,8 +10,8 @@ public class PizzaDirector {
         return this.pizzaBuilder.getPizza();
     }
 
-    public void makePizza(String size){
+    public void makePizza(String size, String[] toppings){
         this.pizzaBuilder.build_pizza_size(size);
-        this.pizzaBuilder.build_pizza_toppings();
+        this.pizzaBuilder.build_pizza_toppings(toppings);
     }
 }

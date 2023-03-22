@@ -11,8 +11,8 @@ public class oldPizzaBuilder implements PizzaBuilder{
     }
 
     @Override
-    public void build_pizza_toppings() {
-        pizza.setPizzaToppings("Some toppings");
+    public void build_pizza_toppings(String[] toppings) {
+        pizza.setPizzaToppings(toppings);
     }
 
     @Override
