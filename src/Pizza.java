@@ -1,6 +1,27 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Pizza implements PizzaPlan{
     private String pizza_size;
     private String[] pizza_toppings;
+
+    private ArrayList<String> possible_toppings = new ArrayList<String>(
+            Arrays.asList("Pepperoni",
+                    "Sausage",
+                    "Mushrooms",
+                    "Bacon",
+                    "Onions",
+                    "Extra Cheese",
+                    "Peppers",
+                    "Chicken",
+                    "Olives",
+                    "Spinach",
+                    "Tomato and Basil",
+                    "Beef",
+                    "Ham",
+                    "Pesto",
+                    "Spicy Pork",
+                    "Ham and Pineapple"));
 
     @Override
     public void setPizzaSize(String size) {
@@ -18,5 +39,9 @@ public class Pizza implements PizzaPlan{
 
     public String[] getPizza_toppings(){
         return pizza_toppings;
+    }
+
+    public ArrayList<String> getPossible_toppings(){
+        return possible_toppings;
     }
 }

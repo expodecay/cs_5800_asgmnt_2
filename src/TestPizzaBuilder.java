@@ -4,7 +4,7 @@ public class TestPizzaBuilder {
 
         PizzaDirector pizzaDirector = new PizzaDirector(oldStylePizza);
 
-        pizzaDirector.makePizza("Medium", new String[]{"Pepperoni", "Sausage", "Mushrooms"});
+        pizzaDirector.makePizza("Medium", new String[]{"Pepperoni", "Sausage", "Mushrooms", "coffee"});
 
         Pizza first_pizza = pizzaDirector.getPizza();
 
