@@ -4,11 +4,12 @@ public class TestPizzaBuilder {
 
         PizzaDirector pizzaDirector = new PizzaDirector(oldStylePizza);
 
-        pizzaDirector.makePizza("Medium", new String[]{"Pepperoni", "Sausage", "Mushrooms", "coffee"});
+        pizzaDirector.makePizza("Pizza Hut", "Medium", new String[]{"Pepperoni", "Sausage", "Mushrooms", "coffee"});
 
         Pizza first_pizza = pizzaDirector.getPizza();
 
         System.out.println("Pizza Built");
+        System.out.println("chain: " + first_pizza.getPizza_chain());
         System.out.println("Size: " + first_pizza.getPizzaSize());
         //System.out.println("Toppings: " + first_pizza.getPizza_toppings()[0]);
         System.out.print("Toppings: ");

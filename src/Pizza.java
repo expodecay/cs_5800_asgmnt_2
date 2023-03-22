@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Pizza implements PizzaPlan{
+    private String pizza_chain;
     private String pizza_size;
     private String[] pizza_toppings;
 
@@ -43,5 +44,13 @@ public class Pizza implements PizzaPlan{
 
     public ArrayList<String> getPossible_toppings(){
         return possible_toppings;
+    }
+
+    public void setPizza_chain(String pizza_chain) {
+        this.pizza_chain = pizza_chain;
+    }
+
+    public String getPizza_chain() {
+        return pizza_chain;
     }
 }

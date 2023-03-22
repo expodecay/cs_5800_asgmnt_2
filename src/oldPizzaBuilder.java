@@ -5,6 +5,10 @@ public class oldPizzaBuilder implements PizzaBuilder{
         this.pizza = new Pizza();
     }
 
+    public void build_pizza_chain(String chain){
+        pizza.setPizza_chain(chain);
+    }
+
     @Override
     public void build_pizza_size(String size) {
         pizza.setPizzaSize(size);
