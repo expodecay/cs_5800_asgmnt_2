@@ -18,6 +18,14 @@ public class DomniosBuilder implements PizzaBuilder{
     @Override
     public void build_pizza_toppings(String[] toppings) {
         pizza.setPizzaToppings(toppings);
+
+        for(int i=0; i<toppings.length; i++){
+            if(toppings[i].isEmpty()){
+                throw new RuntimeException("Topping cannot contain an empty string.");
+            }else if(!pizza.getPossible_toppings().contains(toppings[i])){
+                throw new RuntimeException(("The selected topping " + "'" + toppings[i]+ "'" + " is not available."));
+            }
+        }
     }
 
     @Override
