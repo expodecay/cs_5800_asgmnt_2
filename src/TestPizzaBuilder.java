@@ -1,21 +1,26 @@
 public class TestPizzaBuilder {
     public static void main(String[] args) {
-        PizzaBuilder oldStylePizza = new oldPizzaBuilder();
+        PizzaBuilder pizza_hut = new oldPizzaBuilder();
+        PizzaBuilder little_ceasars = new oldPizzaBuilder();
+        PizzaBuilder dominos = new oldPizzaBuilder();
 
-        PizzaDirector pizzaDirector = new PizzaDirector(oldStylePizza);
+        PizzaDirector pizza_hut_director = new PizzaDirector(pizza_hut);
+        PizzaDirector little_caesars_director = new PizzaDirector((little_ceasars));
 
-        pizzaDirector.makePizza("Pizza Hut", "Medium", new String[]{"Pepperoni", "Sausage", "Mushrooms", "coffee"});
+        PizzaDirector dominos_director = new PizzaDirector(dominos);
 
-        Pizza first_pizza = pizzaDirector.getPizza();
+        pizza_hut_director.makePizza("Pizza Hut", "Large, check size", new String[]{"Pepperoni", "Sausage", "Mushrooms", "coffee"});
+        little_caesars_director.makePizza("Little_Caesars", "Medium, check size", new String[]{"Pepperoni"});
+        dominos_director.makePizza("Dominos", "Medium, check size", new String[]{"Pepperoni", "Sausage"});
 
-        System.out.println("Pizza Built");
-        System.out.println("chain: " + first_pizza.getPizza_chain());
-        System.out.println("Size: " + first_pizza.getPizzaSize());
-        //System.out.println("Toppings: " + first_pizza.getPizza_toppings()[0]);
-        System.out.print("Toppings: ");
 
-        for(int i=0; i< first_pizza.getPizza_toppings().length; i++){
-            System.out.print(first_pizza.getPizza_toppings()[i] + " ");
-        }
+        Pizza pizza_hut_pizza = pizza_hut_director.getPizza();
+        Pizza little_caesars_pizza = little_caesars_director.getPizza();
+        Pizza dominos_pizza = dominos_director.getPizza();
+
+        pizza_hut_pizza.eat();
+        little_caesars_pizza.eat();
+        dominos_pizza.eat();
+
     }
 }

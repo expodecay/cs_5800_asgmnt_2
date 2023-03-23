@@ -53,4 +53,16 @@ public class Pizza implements PizzaPlan{
     public String getPizza_chain() {
         return pizza_chain;
     }
+
+    public void eat(){
+        System.out.println("chain: " + getPizza_chain());
+        System.out.println("Size: " + getPizzaSize());
+        System.out.print("Toppings: ");
+
+        for(int i=0; i<getPizza_toppings().length; i++){
+            System.out.print(getPizza_toppings()[i] + " ");
+        }
+        System.out.println("");
+        System.out.println("---------------------------------------");
+    }
 }
