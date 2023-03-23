@@ -9,9 +9,9 @@ public class TestPizzaBuilder {
 
         PizzaDirector dominos_director = new PizzaDirector(dominos);
 
-        pizza_hut_director.makePizza("Large, check size", new String[]{"Pepperoni", "Sausage", "Mushrooms"});
-        little_caesars_director.makePizza("Medium, check size", new String[]{"Pepperoni"});
-        dominos_director.makePizza("Medium, check size", new String[]{"Pepperoni", "Sausage"});
+        pizza_hut_director.makePizza("Large", new String[]{"Pepperoni", "Sausage", "Mushrooms"});
+        little_caesars_director.makePizza("Medium", new String[]{"Pepperoni"});
+        dominos_director.makePizza("Medium", new String[]{"Pepperoni", "Sausage"});
 
 
         Pizza pizza_hut_pizza = pizza_hut_director.getPizza();

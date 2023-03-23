@@ -13,6 +13,11 @@ public class PizzaHutBuilder implements PizzaBuilder{
     @Override
     public void build_pizza_size(String size) {
         pizza.setPizzaSize(size);
+        if(size.isEmpty()){
+            throw new RuntimeException("The size of a pizza cannot be empty.");
+        }else if(!pizza.getPossible_sizes().contains(size)){
+            throw new RuntimeException(("The selected size " + "'" + size+ "'" + " is not available."));
+        }
     }
 
     @Override
