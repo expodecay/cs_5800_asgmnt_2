@@ -64,6 +64,23 @@ public class Pizza implements PizzaPlan{
         return possible_sizes;
     }
 
+    public void check_size(String size){
+        if(size.isEmpty()){
+            throw new RuntimeException("The size of a pizza cannot be empty.");
+        }else if(!this.getPossible_sizes().contains(size)){
+            throw new RuntimeException(("The selected size " + "'" + size+ "'" + " is not available."));
+        }
+    }
+
+    public void check_toppings(String[] toppings){
+        for (String topping : toppings) {
+            if (topping.isEmpty()) {
+                throw new RuntimeException("Topping cannot contain an empty string.");
+            } else if (!this.getPossible_toppings().contains(topping)) {
+                throw new RuntimeException(("The selected topping " + "'" + topping + "'" + " is not available."));
+            }
+        }
+    }
 
 
     public void eat(){
