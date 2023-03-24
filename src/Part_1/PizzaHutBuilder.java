@@ -1,8 +1,11 @@
-public class oldPizzaBuilder implements PizzaBuilder{
+package Part_1;
+
+public class PizzaHutBuilder implements PizzaBuilder{
     private Pizza pizza;
 
-    public oldPizzaBuilder(){
+    public PizzaHutBuilder(){
         this.pizza = new Pizza();
+        this.pizza.setPizza_chain("Part_1.Pizza Hut");
     }
 
     public void build_pizza_chain(String chain){
@@ -11,11 +14,13 @@ public class oldPizzaBuilder implements PizzaBuilder{
 
     @Override
     public void build_pizza_size(String size) {
+        pizza.check_size(size);
         pizza.setPizzaSize(size);
     }
 
     @Override
     public void build_pizza_toppings(String[] toppings) {
+        pizza.check_toppings(toppings);
         pizza.setPizzaToppings(toppings);
     }
 

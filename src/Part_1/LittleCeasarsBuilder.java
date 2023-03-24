@@ -1,9 +1,11 @@
-public class DomniosBuilder implements PizzaBuilder{
+package Part_1;
+
+public class LittleCeasarsBuilder implements PizzaBuilder{
     private Pizza pizza;
 
-    public DomniosBuilder(){
+    public LittleCeasarsBuilder(){
         this.pizza = new Pizza();
-        this.pizza.setPizza_chain("Pizza Hut");
+        this.pizza.setPizza_chain("Part_1.Pizza Hut");
     }
 
     public void build_pizza_chain(String chain){
@@ -27,3 +29,4 @@ public class DomniosBuilder implements PizzaBuilder{
         return this.pizza;
     }
 }
+
