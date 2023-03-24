@@ -3,7 +3,7 @@ public class LittleCeasarsBuilder implements PizzaBuilder{
 
     public LittleCeasarsBuilder(){
         this.pizza = new Pizza();
-        this.pizza.setPizza_chain("Little Ceasars");
+        this.pizza.setPizza_chain("Pizza Hut");
     }
 
     public void build_pizza_chain(String chain){

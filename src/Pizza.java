@@ -6,11 +6,11 @@ public class Pizza implements PizzaPlan{
     private String pizza_size;
     private String[] pizza_toppings;
 
-    private ArrayList<String> possible_sizes = new ArrayList<>(
+    private final ArrayList<String> possible_sizes = new ArrayList<>(
             Arrays.asList("Small", "Medium", "Large")
     );
 
-    private ArrayList<String> possible_toppings = new ArrayList<String>(
+    private final ArrayList<String> possible_toppings = new ArrayList<>(
             Arrays.asList("Pepperoni",
                     "Sausage",
                     "Mushrooms",
@@ -39,21 +39,21 @@ public class Pizza implements PizzaPlan{
 
     @Override
     public void setPizzaSize(String size) {
-        pizza_size = size;
+        this.pizza_size = size;
     }
 
     public String getPizzaSize(){
-        return pizza_size;
+        return this.pizza_size;
     }
 
     @Override
     public void setPizzaToppings(String[] toppings) {
-        pizza_toppings = toppings;
+        this.pizza_toppings = toppings;
     }
 
 
     public String[] getPizza_toppings(){
-        return pizza_toppings;
+        return this.pizza_toppings;
     }
 
     public ArrayList<String> getPossible_toppings(){
@@ -85,7 +85,7 @@ public class Pizza implements PizzaPlan{
 
     public void eat(){
         System.out.println("chain: " + getPizza_chain());
-        System.out.println("Size: " + getPizzaSize());
+        System.out.println("Size: " + getPizzaSize() );
         System.out.print("Toppings: ");
 
         for(int i=0; i<getPizza_toppings().length; i++){

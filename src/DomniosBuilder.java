@@ -3,7 +3,7 @@ public class DomniosBuilder implements PizzaBuilder{
 
     public DomniosBuilder(){
         this.pizza = new Pizza();
-        this.pizza.setPizza_chain("Dominos");
+        this.pizza.setPizza_chain("Pizza Hut");
     }
 
     public void build_pizza_chain(String chain){
@@ -20,8 +20,6 @@ public class DomniosBuilder implements PizzaBuilder{
     public void build_pizza_toppings(String[] toppings) {
         pizza.check_toppings(toppings);
         pizza.setPizzaToppings(toppings);
-
-
     }
 
     @Override
