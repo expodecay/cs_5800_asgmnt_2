@@ -16,6 +16,17 @@ public class VehicleProducer {
                 factory = TeslaFactory.getFactory();
             }
         }
+        if(vehicle_type.equals("Plane")){
+            if(vehicle_make.equals("Airbus")){
+                factory = AirbusFactory.getFactory();
+            }
+            else if(vehicle_make.equals("Boeing")){
+                factory = BoeingFactory.getFactory();
+            }
+            else if(vehicle_make.equals("Embraer")){
+                factory = EmbraerFactory.getFactory();
+            }
+        }
         return factory;
     }
 }

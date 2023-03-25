@@ -41,6 +41,4 @@ public class HondaFactory extends AbstractFactory{
     public Vehicle get_vehicle() {
         return car;
     }
-
-
 }
