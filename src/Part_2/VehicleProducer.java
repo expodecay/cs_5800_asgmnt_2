@@ -27,6 +27,17 @@ public class VehicleProducer {
                 factory = EmbraerFactory.getFactory();
             }
         }
+        if(vehicle_type.equals("Boat")){
+            if(vehicle_make.equals("SeaRay")){
+                factory = SeaRayFactory.getFactory();
+            }
+            else if(vehicle_make.equals("Mastercraft")){
+                factory = MastercraftFactory.getFactory();
+            }
+            else if(vehicle_make.equals("Bertram")){
+                factory = BertramFactory.getFactory();
+            }
+        }
         return factory;
     }
 }

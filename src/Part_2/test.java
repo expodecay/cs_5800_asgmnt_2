@@ -13,6 +13,10 @@ public class test {
         AbstractFactory tesla_factory_2 = VehicleProducer.getFactory("Car", "Tesla");
         AbstractFactory airbus_factory_2 = VehicleProducer.getFactory("Plane", "Airbus");
 
+        AbstractFactory searay_factory = VehicleProducer.getFactory("Boat", "SeaRay");
+        AbstractFactory mastercraft_factory = VehicleProducer.getFactory("Boat", "Mastercraft");
+        AbstractFactory bertram_factory = VehicleProducer.getFactory("Boat", "Bertram");
+
         honda_factory.build_vehicle();
         honda_factory.repair_vehicle();;
         honda_factory.restore_vehicle();
@@ -42,5 +46,18 @@ public class test {
         tesla_factory_2.build_vehicle();
         System.out.println("\nSecond Airbus factory:");
         airbus_factory_2.build_vehicle();
+
+        System.out.println("\n.......................");
+        searay_factory.build_vehicle();
+        searay_factory.repair_vehicle();
+        searay_factory.restore_vehicle();
+        System.out.println();
+        mastercraft_factory.build_vehicle();
+        mastercraft_factory.repair_vehicle();
+        mastercraft_factory.restore_vehicle();
+        System.out.println();
+        bertram_factory.build_vehicle();
+        bertram_factory.repair_vehicle();
+        bertram_factory.restore_vehicle();
     }
 }
