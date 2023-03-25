@@ -5,7 +5,7 @@ public class PizzaHutBuilder implements PizzaBuilder{
 
     public PizzaHutBuilder(){
         this.pizza = new Pizza();
-        this.pizza.setPizza_chain("Part_1.Pizza Hut");
+        this.pizza.setPizza_chain("Pizza Hut");
     }
 
     public void build_pizza_chain(String chain){
@@ -26,6 +26,12 @@ public class PizzaHutBuilder implements PizzaBuilder{
 
     @Override
     public Pizza getPizza() {
-        return this.pizza;
+        Pizza new_pizza = new Pizza();
+        new_pizza.setPizza_chain(this.pizza.getPizza_chain());
+        new_pizza.check_size(this.pizza.getPizzaSize());
+        new_pizza.setPizzaSize(this.pizza.getPizzaSize());
+        new_pizza.check_toppings(this.pizza.getPizza_toppings());
+        new_pizza.setPizzaToppings(this.pizza.getPizza_toppings());
+        return new_pizza;
     }
 }

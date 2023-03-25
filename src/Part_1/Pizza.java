@@ -84,7 +84,6 @@ public class Pizza implements PizzaPlan{
         }
     }
 
-
     public void eat(){
         System.out.println("chain: " + getPizza_chain());
         System.out.println("Size: " + getPizzaSize() );
